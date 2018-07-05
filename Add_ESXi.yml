@@ -14,7 +14,7 @@
       validate_certs: no
       datacenter_name: JEREMY.PRADEL
       cluster_name: SEBASTIEN.RABBY
-      esxi_hostname: '192.168.23.10'
+      esxi_hostname: '192.168.23.11'
       esxi_username: 'root'
       esxi_password: 'Espoir15'
       state: present
