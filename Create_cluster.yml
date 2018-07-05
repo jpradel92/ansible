@@ -12,8 +12,8 @@
       hostname: 192.168.23.9
       username: administrator@vsphere.local
       password: vmware
-      datacenter_name: 'vDc_AWX'
-      cluster_name: Cluster_AWX
+      datacenter_name: 'JEREMY.PRADEL'
+      cluster_name: SEBASTIEN.RABBY
       enable_ha: yes
       enable_drs: yes
       enable_vsan: no
