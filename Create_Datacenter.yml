@@ -1,15 +1,17 @@
 ---
 - name : Create Datacenter
-  hosts: localhost
+  hosts : Vcenter
+  gather_facts: false
+  connection: Vcenter
 
   tasks:
   - name: Create Datacenter
     local_action:
       module: vmware_datacenter
-      hostname: vc65.labvmware.local
+      hostname: 192.168.23.9
       username: administrator@vsphere.local
-      password: 'YourMdp'
-      datacenter_name: 'vDc_Ansible'
+      password: vmware
+      datacenter_name: 'vDc_ESGI'
       state: present
       validate_certs: no
 #    delegate_to: localhost
