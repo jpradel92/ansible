@@ -13,7 +13,7 @@
       name: test.ansible
       state: poweredoff
       folder: /
-      datacenter: vDc_ESGI
+      datacenter: vDc_AWX
       guest_id: centos64Guest
       disk:
       - size_gb: "10"
