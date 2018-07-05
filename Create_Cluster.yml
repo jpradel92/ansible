@@ -1,16 +1,19 @@
 ---
 - name : Create Cluster
-  hosts: localhost
+  hosts : Vcenter
+  gather_facts: false
+  connection: Vcenter
+
 
   tasks:
   - name: Create Cluster
     local_action:
       module: vmware_cluster
-      hostname: vc65.labvmware.local
+      hostname: 192.168.23.9
       username: administrator@vsphere.local
-      password: 'YourMdp'
-      datacenter_name: 'vDc_Ansible'
-      cluster_name: C_Ansible
+      password: vmware
+      datacenter_name: 'vDc_ESGI'
+      cluster_name: Cluster_ESGI
       enable_ha: yes
       enable_drs: yes
       enable_vsan: no
