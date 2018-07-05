@@ -11,7 +11,7 @@
       hostname: 192.168.23.9
       username: administrator@vsphere.local
       password: vmware
-      datacenter_name: 'vDc_ESGI'
+      datacenter_name: 'vDc_AWX'
       state: present
       validate_certs: no
 #    delegate_to: localhost
