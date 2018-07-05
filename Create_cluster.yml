@@ -1,6 +1,6 @@
 ---
 - name : Create Cluster
-  hosts : Vcenter
+  hosts: Vcenter
   gather_facts: false
   connection: Vcenter
 
