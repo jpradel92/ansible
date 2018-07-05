@@ -1,7 +1,7 @@
 ---
 - name : Create Datacenter
-  hosts : localhost
-  
+  hosts: localhost
+
   tasks:
   - name: Create Datacenter
     local_action:
@@ -12,5 +12,3 @@
       datacenter_name: 'vDc_ESGI'
       state: present
       validate_certs: no
-#    delegate_to: localhost
-#    register: vmfacts
