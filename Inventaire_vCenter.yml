@@ -1,18 +1,16 @@
 ---
-- name : Gather all registered virtual machines
-  hosts: localhost
-
-  vars_prompt:
-    - name: "Your_Password"
-      prompt: "Enter_vcenter hostname"
-      private: no
-
+- name : Create Datacenter
+  hosts : localhost
+  
   tasks:
-  - name: Gather all registered virtual machines
-    vmware_vm_facts:
-      hostname: vc65.labvmware.local
+  - name: Create Datacenter
+    local_action:
+      module: vmware_datacenter
+      hostname: 192.168.23.9
       username: administrator@vsphere.local
-      password: '{{ Your_Password }}'
+      password: vmware
+      datacenter_name: 'vDc_ESGI'
+      state: present
       validate_certs: no
-    delegate_to: localhost
-    register: vmfacts
+#    delegate_to: localhost
+#    register: vmfacts
