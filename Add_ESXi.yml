@@ -12,8 +12,8 @@
       username: 'administrator@vsphere.local'
       password: 'vmware'
       validate_certs: no
-      datacenter_name: KAMEL.SEBBANE
-      cluster_name: TEDDY.FRONTIN
+      datacenter_name: JEREMY.PRADEL
+      cluster_name: SEBASTIEN.RABBY
       esxi_hostname: '192.168.23.10'
       esxi_username: 'root'
       esxi_password: 'Espoir15'
