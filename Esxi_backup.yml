@@ -8,7 +8,7 @@
   - name: ESXI backup test
     local_action:
       module: vmware_cfg_backup
-      hostname: vCenter
+      hostname: 192.168.23.9
       esxi_hostname: 192.168.23.11
       username: administrator@vsphere.local
       password: vmware
