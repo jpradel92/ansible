@@ -10,8 +10,8 @@
       module: vmware_cfg_backup
       hostname: vCenter
       esxi_hostname: 192.168.23.11
-      username: "root"
-      password: "vmware"
+      username: administrator@vsphere.local
+      password: vmware
       validate_certs: no
       state: saved
       dest: /tmp/
