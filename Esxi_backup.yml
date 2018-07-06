@@ -16,7 +16,7 @@
     local_action:
       module: vmware_cfg_backup
       hostname: vCenter
-      esxi_hostname: 192.168.23.10
+      esxi_hostname: 192.168.23.11
       username: "{{ user }}"
       password: "{{ password }}"
       validate_certs: no
