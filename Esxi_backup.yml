@@ -3,13 +3,6 @@
   hosts: localhost
   gather_facts: false
   connection: Vcenter
-  
-  vars_prompt:
-    - name: "user"
-      prompt: "utilisateur Vcenter"
-    - name: "password"
-      prompt: "password Vcenter"
-      private: yes
 
   tasks:
   - name: ESXI backup test
@@ -17,8 +10,8 @@
       module: vmware_cfg_backup
       hostname: vCenter
       esxi_hostname: 192.168.23.11
-      username: "{{ user }}"
-      password: "{{ password }}"
+      username: "root"
+      password: "vmware"
       validate_certs: no
       state: saved
       dest: /tmp/
