@@ -12,11 +12,11 @@
       name: VM_test
       state: poweredoff
       folder: /
-      guest_id: centos64Guest
+      guest_id: ubuntu-16.04.4-desktop-amd64.iso
       disk:
       - size_gb: "10"
         type: thin
-        datastore: stockage
+        datastore: Stockage
       networks:
       - name: VM Network
         type: dhcp
