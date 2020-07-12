@@ -6,7 +6,7 @@
    - name: Create a VM
      delegate_to: localhost
      vsphere_guest: 192.168.1.48
-       esxi:
+       esxi: 192.168.1.48
          datacenter: ha-datacenter
          hostname: 192.168.1.48
        username: root
