@@ -12,7 +12,7 @@
       name: VM_test
       state: poweredoff
       folder: /
-      guest_id: ubuntu-16.04.4-desktop-amd64.iso
+      guest_id: ubuntu16
       disk:
       - size_gb: "10"
         type: thin
