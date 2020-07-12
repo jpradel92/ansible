@@ -1,39 +1,36 @@
 ---
 - name : Automatize vmware
   hosts: localhost
-
   tasks:
-   - name: Create a VM
-     delegate_to: localhost
-     vsphere_guest: 192.168.1.48
-       esxi: 192.168.1.48
-         datacenter: ha-datacenter
-         hostname: 192.168.1.48
-       username: root
-       password: Root1234
-       validate_certs: no
-       guest: Test_VM
-       state: powered_on
-       vm_extra_config:
-         vcpu.hotadd: yes
-         mem.hotadd:  yes
-         notes: This is a test VM created using Ansible
-
-       vm_disk:
-         disk1:
-           size_gb: 100
-           type: thin
-           datastore: stockage
-       vm_nic:
-         nic1:
-           type: vmxnet3
-           network: VM Network
-           network_type: standard
-       vm_hardware:
-         memory_mb: 2048
-         num_cpus: 2
-         osid: ubuntu-16.04.4-desktop-amd64
-         scsi: paravirtual
-         vm_cdrom:
-           type: "iso"
-           iso_path: "ubuntu-16.04.4-desktop-amd64.iso"
+  - name: Create VM
+    local_action:
+      module: vmware_guest
+      hostname: 192.168.23.9
+      username: administrator@vsphere.local
+      password: vmware
+      hostname: 192.168.1.48
+      username: root
+      password: Root1234!
+      validate_certs: no
+      name: mamadou.diakite
+      name: VM_test
+      state: poweredoff
+      folder: /
+      datacenter: JEREMY.PRADEL
+      guest_id: centos64Guest
+      disk:
+      - size_gb: "10"
+        type: thin
+        datastore: datastore1 (1)
+        datastore: stockage
+      networks:
+      - name: VM Network
+        type: dhcp
+      hardware:
+        memory_mb: "512"
+        num_cpus: "1"
+        scsi: paravirtual
+        hotadd_cpu: True
+        hotremove_cpu: True
+        hotadd_memory: False
+    tags: vm
