@@ -9,7 +9,7 @@
       username: root
       password: Root1234!
       validate_certs: no
-      name: VM_test
+      name: VM_test1
       state: poweredoff
       folder: /
       guest_id: ubuntu64Guest
